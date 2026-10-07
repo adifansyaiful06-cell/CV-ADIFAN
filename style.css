@@ -1,0 +1,188 @@
+/* Reset margin & padding dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* Container utama untuk efek kertas (A4) */
+.cv-container {
+  width: 800px;
+  background-color: #ffffff;
+  padding: 50px 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  /* Border biru tua sesuai gambar */
+  border: 4px solid #234b7f;
+  border-radius: 4px;
+}
+
+/* Hiasan sudut border (opsional agar mirip bingkai) */
+.cv-container::before,
+.cv-container::after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 10px;
+  background: white;
+  left: 2.5%;
+  z-index: 1;
+}
+.cv-container::before {
+  top: -4px;
+}
+.cv-container::after {
+  bottom: -4px;
+}
+
+.cv-inner-border {
+  position: relative;
+  z-index: 2;
+}
+
+/* Header CV (Judul CV) */
+.header-title {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.title-black {
+  color: #000;
+  font-weight: bold;
+}
+
+.title-blue {
+  color: #234b7f;
+  font-weight: bold;
+}
+
+/* Bagian Info Profil & Foto */
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.personal-info table {
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.personal-info td:nth-child(1) {
+  font-weight: bold;
+  width: 160px;
+  vertical-align: top;
+}
+
+.personal-info td:nth-child(2) {
+  width: 20px;
+  vertical-align: top;
+}
+
+.personal-info td:nth-child(3) {
+  vertical-align: top;
+}
+
+/* Foto Profil */
+.profile-pic {
+  width: 140px;
+  height: 180px;
+  border: 1px solid #ccc;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Judul Section (Pendidikan, Kemampuan, Pengalaman) */
+.section-title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #234b7f;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #7ea1c4;
+}
+
+.section-title::before {
+  margin-right: 15px;
+  flex: 0.1; /* Garis kiri lebih pendek */
+}
+
+.section-title::after {
+  margin-left: 15px;
+}
+
+/* Konten dalam Section */
+.section-content {
+  padding-left: 30px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.sub-heading {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+/* Layout untuk Pendidikan & Pengalaman (Tahun - Deskripsi) */
+.timeline-item {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.timeline-year {
+  width: 130px;
+  flex-shrink: 0;
+  color: #333;
+}
+
+.timeline-desc {
+  flex-grow: 1;
+}
+
+/* Daftar Kemampuan (Checkmark list) */
+.skills-list {
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+.skills-list li {
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.skills-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #333;
+}
+
+/* Footer / Website */
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #888;
+}
